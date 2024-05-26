@@ -29,7 +29,6 @@ html_code = """
 <!-- TradingView Widget END -->
 """
 
-# Use the top-level 'html' function to render HTML components
 st.html(html_code, height=650, width=1330)
 
 api_key = 'dIiTULVm'
@@ -86,3 +85,30 @@ else:
         "tradingsymbol": tradingsymbol,
         "symboltoken": symboltoken,
         "transactiontype": transactiontype,
+        "exchange": exchange,
+        "ordertype": ordertype,
+        "producttype": producttype,
+        "duration": duration,
+        "price": price,
+        "squareoff": squareoff,
+        "stoploss": stoploss,
+        "quantity": quantity
+    }
+
+    # Place order when button is clicked
+    if st.button("Place Order"):
+        try:
+            orderid = smartApi.placeOrder(orderparams)
+            st.success(f"Order placed successfully with Order ID: {orderid}")
+            order_df = pd.DataFrame([{
+                "Order ID": orderid,
+                "Trading Symbol": tradingsymbol,
+                "Transaction Type": transactiontype,
+                "Quantity": quantity,
+                "Price": price
+            }])
+            st.write("### Last Order Placed")
+            st.dataframe(order_df)
+        except Exception as e:
+            st.error(f"Order placement failed: {e}")
+ 
