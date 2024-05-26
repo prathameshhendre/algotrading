@@ -5,31 +5,31 @@ from SmartApi import SmartConnect  # or from SmartApi.smartConnect import SmartC
 
 st.set_page_config(layout="wide")
 
-html_code = """
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-  {
-  "width": "1315",
-  "height": "635",
-  "symbol": "BSE:SENSEX",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "en",
-  "allow_symbol_change": true,
-  "calendar": false,
-  "support_host": "https://www.tradingview.com"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-"""
+# html_code = """
+# <!-- TradingView Widget BEGIN -->
+# <div class="tradingview-widget-container">
+#   <div class="tradingview-widget-container__widget"></div>
+#   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+#   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+#   {
+#   "width": "1315",
+#   "height": "635",
+#   "symbol": "BSE:SENSEX",
+#   "interval": "D",
+#   "timezone": "Etc/UTC",
+#   "theme": "dark",
+#   "style": "1",
+#   "locale": "en",
+#   "allow_symbol_change": true,
+#   "calendar": false,
+#   "support_host": "https://www.tradingview.com"
+# }
+#   </script>
+# </div>
+# <!-- TradingView Widget END -->
+# """
 
-st.components.v1.html(html_code, height=650, width=1330)
+# st.components.v1.html(html_code, height=650, width=1330)
 
 api_key = 'dIiTULVm'
 username = 'IIRA13264'
