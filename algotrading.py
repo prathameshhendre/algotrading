@@ -29,7 +29,7 @@ html_code = """
 <!-- TradingView Widget END -->
 """
 
-st.components.v1.html(html_code, height=650, width=1330)
+st.components.v1.iframe(html=html_code, width=1330, height=650)
 
 api_key = 'dIiTULVm'
 username = 'IIRA13264'
