@@ -1,3 +1,4 @@
+streamlit
 pyotp
 SmartApi
 pandas
